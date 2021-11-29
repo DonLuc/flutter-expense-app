@@ -19,6 +19,12 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: const Text("Expense App"),
+          actions: [
+            IconButton(
+              onPressed: () => null,
+              icon: const Icon(Icons.add),
+            )
+          ],
         ),
         body: SingleChildScrollView(
           child: Column(
@@ -40,6 +46,11 @@ class MyApp extends StatelessWidget {
               UserTransactions()
             ],
           ),
+        ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+        floatingActionButton: FloatingActionButton(
+          child: const Icon(Icons.add),
+          onPressed: () => {},
         ),
       ),
     );
